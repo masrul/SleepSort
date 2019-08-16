@@ -3,10 +3,10 @@ program sleepSort
     implicit none
     integer::nArgs,myid,i,stat
     integer,allocatable::intArg(:)
-	character(len=5)::arg
+    character(len=5)::arg
 
-	!$omp master
-	nArgs=command_argument_count()
+    !$omp master
+    nArgs=command_argument_count()
     if(nArgs==0)stop ' : No argument is given !'
 	allocate(intArg(nArgs))
 	do i=1,nArgs
