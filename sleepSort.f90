@@ -2,7 +2,7 @@ program sleepSort
 	use omp_lib
     implicit none
     integer::nArgs,myid,i,stat
-	integer,allocatable::intArg(:)
+    integer,allocatable::intArg(:)
 	character(len=5)::arg
 
 	!$omp master
